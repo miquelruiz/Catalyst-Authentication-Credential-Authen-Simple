@@ -18,3 +18,6 @@ Revision history for Perl module Catalyst::Authentication::Credential::Authen::S
     - Added Copyright information for Debian compliance (RT #50708)
 0.07 Mon Nov 16 19:07:00 2009
     - Tests where failing because parent wasn't in Makefile.PL
+{{$NEXT}}
+    - Fix for #67929: Invalid META.yml
+    - Released using Dist::Zilla
