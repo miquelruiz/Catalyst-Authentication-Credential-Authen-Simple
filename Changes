@@ -1,6 +1,9 @@
 Revision history for Perl module Catalyst::Authentication::Credential::Authen::Simple
 
 {{$NEXT}}
+    - "Changes" file fixed
+    - Version not hardcoded in modules
+0.08      2012-10-25 19:39:02 Europe/Madrid
     - Fix for #67929: Invalid META.yml
     - Released using Dist::Zilla
 0.07 Mon Nov 16 19:07:00 2009
