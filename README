@@ -1,8 +1,10 @@
 NAME
+
     Catalyst::Authentication::Credential::Authen::Simple - Verify
     credentials with the Authen::Simple framework
 
 SYNOPSIS
+
       use Catalyst qw(Authentication);
       # later on ...
       if ($c->authenticate({ username => 'myusername', 
@@ -12,18 +14,21 @@ SYNOPSIS
       }
 
 DESCRIPTION
+
     This module helps your Cataylst Application authenticate against a lot
     of credential databases thanks to the Authen::Simple framework.
 
 USAGE
+
     Just configure your Catalyst App Authentication to use class
     'Authen::Simple' as the credential verifier, and give it a set of
-    Authen::Simple classes. You can pass arguments to the Authen::Simple:XXX
-    class constructors with the 'args' key. Note that the authen key is an
-    array. If more than one class is specified, when your app authenticates,
-    the username and password is submitted to each class until one of the
-    classes returns that the user/pass pair is valid. If no class validates
-    the credentials, the user is not able to log in.
+    Authen::Simple classes. You can pass arguments to the
+    Authen::Simple:XXX class constructors with the 'args' key. Note that
+    the authen key is an array. If more than one class is specified, when
+    your app authenticates, the username and password is submitted to each
+    class until one of the classes returns that the user/pass pair is
+    valid. If no class validates the credentials, the user is not able to
+    log in.
 
       'Plugin::Authentication' => {
         'realms' => {
@@ -53,15 +58,18 @@ USAGE
     If the Catalyst log object is compatible with the Authen::Simple log
     object, Authen::Simple classes will log through Catalyst.
 
-  new
-    Called by Catalyst::Authentication. Instances the Authen::Simple classes
-    read from the configuration.
+ new
 
-  authenticate
+    Called by Catalyst::Authentication. Instances the Authen::Simple
+    classes read from the configuration.
+
+ authenticate
+
      Usage     : Call $c->authenticate({ username => ..., password => ...}); 
      Returns   : User object if the credentials are verified successfully. undef if user not authenticated.
 
 AUTHOR
+
         Jose Luis Martinez
         CPAN ID: JLMARTIN
         CAPSiDE
@@ -69,10 +77,12 @@ AUTHOR
         http://www.pplusdomain.net
 
 THANKS
-    Tobjorn Lindahl, Dylan Martin, Tomas Doran and Inigo Tejedor Arrondo for
-    patches and recommedations
+
+    Tobjorn Lindahl, Dylan Martin, Tomas Doran and Inigo Tejedor Arrondo
+    for patches and recommedations
 
 COPYRIGHT
+
     Copyright (c) 2008 by Jose Luis Martinez Torres
 
     This program is free software; you can redistribute it and/or modify it
@@ -82,5 +92,6 @@ COPYRIGHT
     with this module.
 
 SEE ALSO
+
     Authen::Simple and all of the Authen::Simple::XXX classes
 
